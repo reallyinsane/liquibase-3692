@@ -1,0 +1,18 @@
+#default profile
+
+server:
+  port: 8183
+  servlet:
+    context-path: /demo
+spring:
+  datasource:
+    url: jdbc:h2:~/liquibase;DB_CLOSE_ON_EXIT=false
+    username: sa
+    password:
+  liquibase:
+    change-log: file:D:/matthias/data/dev/workspaces-forks/demo/src/main/liquibase/changelog-master.xml
+    #change-log: classpath:changelog-master.xml
+    enabled: true
+logging:
+  level:
+    "liquibase" : debug
